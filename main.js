@@ -766,6 +766,7 @@
 
 // btn.addEventListener("click", getFacts);
 
+// trending movies
 const movieList = document.querySelector(".movie");
 const options = {
   method: "GET",
