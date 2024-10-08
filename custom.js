@@ -11,33 +11,33 @@
 
 // // https://drive.google.com/drive/folders/1wfNTKinBAV6CCxaI5lfSnnRFAYpy0uEl
 
-// let numbCount = document.querySelector("h1");
-// let increaseBtn = document.querySelector("#increase");
-// let decreaseBtn = document.querySelector("#decrease");
-// let resetBtn = document.querySelector("#reset");
+let numbCount = document.querySelector("h1");
+let increaseBtn = document.querySelector("#increase");
+let decreaseBtn = document.querySelector("#decrease");
+let resetBtn = document.querySelector("#reset");
 
-// let counter = 0;
+let counter = 0;
 
-// increaseBtn.addEventListener("click", () => {
-//   counter++;
-//   if (counter >= 1) {
-//     numbCount.innerText = counter;
-//     decreaseBtn.disabled = false;
-//   }
-// });
-// decreaseBtn.addEventListener("click", () => {
-//   counter--;
-//   numbCount.innerText = counter;
-//   if (counter < 1) {
-//     numbCount.innerText = "0";
-//     decreaseBtn.disabled = true;
-//   }
-// });
+increaseBtn.addEventListener("click", () => {
+  counter++;
+  if (counter >= 1) {
+    numbCount.innerText = counter;
+    decreaseBtn.disabled = false;
+  }
+});
+decreaseBtn.addEventListener("click", () => {
+  counter--;
+  numbCount.innerText = counter;
+  if (counter < 1) {
+    numbCount.innerText = "0";
+    decreaseBtn.disabled = true;
+  }
+});
 
-// resetBtn.addEventListener("click", () => {
-//   numbCount.innerText = "0";
-//   counter = "0";
-// });
+resetBtn.addEventListener("click", () => {
+  numbCount.innerText = "0";
+  counter = "0";
+});
 // let row = document.querySelector("#testimonial");
 // let testimonials = [
 //   {
