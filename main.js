@@ -768,6 +768,11 @@
 
 // trending movies
 const movieList = document.querySelector(".movie");
+const prevPageButton = document.getElementById("prevPage");
+const nextPageButton = document.getElementById("nextPage");
+const pageNumberSpan = document.getElementById("pageNumber");
+let currentPage = 1;
+
 const options = {
   method: "GET",
   headers: {
@@ -776,12 +781,14 @@ const options = {
       "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNDFjMjA1ZTA2NzM1Njc5OTBkZjUxYTYwNjEwNDhkZSIsIm5iZiI6MTcyODM2MTgwMS40OTEyNzIsInN1YiI6IjY2YjBjMTU2MzU0OTk4NDA0MGY0OGU2MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.LL3lWhLOfrkVoh2obTE7qLxr14Rwq07Od893T-JgNB8",
   },
 };
-const URL = "https://api.themoviedb.org/3/trending/movie/week?language=en-US";
 
-const getMovies = async () => {
+const getMovies = async (page = 1) => {
+  const URL = `https://api.themoviedb.org/3/trending/movie/week?language=en-US&page=${page}`;
   let response = await fetch(URL, options);
   let movieData = await response.json();
   let movie = movieData.results;
+
+  movieList.innerHTML = "";
 
   movie.forEach((movies) => {
     let createImg = document.createElement("img");
@@ -826,5 +833,19 @@ const getMovies = async () => {
     createCol.appendChild(rating);
     rating.appendChild(span);
   });
+  pageNumberSpan.innerText = currentPage;
+  prevPageButton.disabled = currentPage === 1;
+  nextPageButton.disabled = currentPage === movieData.total_pages;
 };
+prevPageButton.addEventListener("click", () => {
+  if (currentPage > 1) {
+    currentPage--;
+    getMovies(currentPage);
+  }
+});
+
+nextPageButton.addEventListener("click", () => {
+  currentPage++;
+  getMovies(currentPage);
+});
 getMovies();
