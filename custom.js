@@ -15,7 +15,6 @@ let numbCount = document.querySelector("h1");
 let increaseBtn = document.querySelector("#increase");
 let decreaseBtn = document.querySelector("#decrease");
 let resetBtn = document.querySelector("#reset");
-
 let counter = 0;
 
 increaseBtn.addEventListener("click", () => {
