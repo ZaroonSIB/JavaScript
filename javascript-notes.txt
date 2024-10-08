@@ -1,0 +1,665 @@
+Variables
+
+Variables is a container which have store the value
+
+There is 3 type of variables declaration
+
+1. Var is we can re-declare and re-assign the value in global scope
+2. Let is we can not re-declare but we can update the value in block scope
+3. Const is we can not re-declare and not update the value in block scope
+   if const is an object then we can change the key value
+
+-------------------------------------------------------------------------------
+
+Data Types
+
+There is 2 types of data types
+
+1. Primitive
+2. Non-Primitive
+
+
+1. Primitive data type
+   There is 7 type of primitive data type
+   i. Number (1,2,3,4,5,......0)
+  ii. String (a,b,c,d,.....z)
+ iii. Boolean (true or false)
+  iv. Undefined (Undefined)
+   v. Null (null)
+  vi. Biglnt (123n)
+ vii. Symbol (symbol(a,b,))
+
+2. No-Primitive data type
+   No-primitive is an object, object is a collection of values
+
+
+-------------------------------------------------------------------------------
+
+Operators
+
+Used to perform some operation on data
+ +, -, *, /,
+
+ Modulus (%)
+ Increament (++)
+ Decreament (--)
+
+
+Assignment Operators
+
+used to assign value for variables
+
++=
+
+let a = 5
+let b = 4
+
+a += 4
+  a = a + 4
+
+Comparison Operators
+
+to comapre two values
+
+Equal to ==
+Equal to & type ===
+
+Not Equal to !=
+Not Equal to & type !==
+
+Greater than (>)
+Greater than & Equal to (>=)
+
+Less than (<)
+Less than and Equal to (<=)
+
+Logical Operators
+
+Logical And  &&
+
+if 2 condition will be true then it's return Boolean true
+
+let a = 6
+let b = 4
+
+let cond1 =   a > b
+let cond2 = a === 6
+console.log (cond1 && cond2)
+true
+
+
+Logical Or ||
+
+if any one condition will be true then it's return Boolean true
+
+let a = 6
+let b = 4
+
+let cond1 =   a > b
+let cond2 = a === 7
+console.log (cond1 || cond2)
+true
+
+Logical Not !
+
+if some condition is true then it's return Boolean false or condition is false it's return true
+
+-------------------------------------------------------------------------------------------------
+
+Conditional Statement
+
+To implement some condition in the code
+
+IF Statement
+
+if statement is return Boolean true then IF statement run
+
+let mode = "dark-mode"
+let color;
+
+if (mode == "dark-mode"){
+   color = "black";
+}
+
+IF-ELSE Statement
+if statement is return Boolean true then IF statement run and statement is Boolean false the ELSE Statement run
+
+let mode = "dark-mode";
+let color;
+
+if(mode == "dark-mode"){
+   color = "black";
+} else{
+   color = "white";
+}
+
+ELSE-IF Statement
+if we check multiple condition then we will use else-if statement
+
+let age = 45;
+
+if (age < 18){
+   console.log('You are Junior');
+}
+else if(age > 60) {
+   console.log('You are Senior');
+} else{
+   console.log('You are middle');
+}
+
+
+Ternary Operators
+condition ? true output : false output
+
+age > 18 ? "Adult" : "Not Adult";
+
+
+------------------------------------------------------------------------------------
+
+Loops in Js
+
+Loops are used to execute a pieces of code again and again
+
+Loops are generally 4 types
+
+1. FOR Loop
+2. While Loop
+3. Do While Loop
+4. Foreach Loop
+
+FOR Loop
+
+
+for(let i =1; i < 5; i++){
+   console.logo("Hello World");
+}
+
+2. While Loop
+
+let i = 1;
+
+while(i<=5){
+   i++
+   console.log(i);
+}
+
+----------------------------------------------------------------------
+
+Strings in Js
+String is a sequence of characters used to represent  text
+
+create String
+let str = "Hello World";
+
+string length 
+str.length;
+
+str[0], str[1];
+
+Template Literals
+
+A way to have embedded expressions in string
+
+let obj = {
+   item : "pen",
+   price: 20
+}
+let output = `The cost of the ${obj.item} is ${obj.price} rupees`;
+console.log(output)
+
+escape characters
+\n next line
+
+String Method in Js
+These are built-in functions to manipulate a string
+
+str.toUpperCase()  convert Uppercase
+let str = "hello world";
+let upercase = str.toUpperCase()
+console.log(upercase);
+output is HELLO WORLD
+
+Str.toLowerCase();  convert Lowercase
+let str = "HELLO WORLD";
+let lowercase = str.toLowerCase()
+console.log(lowercase);
+output is hello world
+
+
+str.trim();  remove whitespace
+let str = "   Hello World    ";
+let removeSpace = str.trim()
+console.log(removeSpace);
+output is Hello World
+
+str.replace() remove whitespace from two words
+let str = "Hello World";
+let removeFullSpace = str.replace(" ", "");
+console.log(removeFullSpace);
+output is HelloWorld;
+
+
+---------------------------------------------------------------------------------
+
+Arrays
+Arrays are collection of the items
+
+create Arrays
+
+let heroes = ["Ironman", "Thor", "Captan America", "Black Widow"]
+
+let marks = [97, 87, 56, 67, 35]
+
+let info = ["Rahul", 86, "Delhi"]
+
+change arrays value
+let heroes = ["Ironman", "Thor", "Captan America", "Black Widow"]
+heroes[3] = "Ragonrok";
+console.log(heroes);
+
+Looping over an arrays
+Print all elements of an array
+
+let heroes = ["Ironman", "Thor", "Captan America", "Black Widow"]
+
+for (let i = 0; i < heroes.length; i++){
+   console.log(heroes[i]);
+}
+
+// change the arrays final prcie after 10% off of every itmes
+
+
+let items = [250, 645, 300, 900, 50];
+
+method 1
+
+ let i = 0;
+ for (let item of items) {
+   console.log(`Value at index ${i} = ${item}`);
+   let offer = item / 10;
+   let finalPrice = item - offer;
+   console.log(`Value after offer ${i} = ${finalPrice}`);
+   i++;
+ }
+
+method 2
+
+for (let i = 0; i < items.length; i++) {
+  let offer = items[i] / 10;
+  items[i] -= offer;
+}
+console.log(items);
+
+Array Methods
+
+Push() :  add to end
+
+Pop():   Delete from end & return
+
+toString(): convert array to string
+
+Concat(): joins multiple array & return result
+
+let marvels = ["Ironman", "Thor", "Black Panther"];
+let dc = ["Superman", "batman"];
+
+let heroes = marvels.concat(dc); 
+
+unshift(): add to start
+
+shift(): Delete from start & return
+
+slice(): return a piece of the array
+slice(startIdx, endIdx) not change in original array return new array
+
+splice(): change original array (add, remove, replace);
+splice(startIdx, delCount, newEl1...)
+
+
+---------------------------------------------------------------------------------------
+
+Functions in Js
+Block of the code that performs a specific task, can be invoked whenever needed
+
+function defination
+function functionName(){
+   // do some work
+}
+
+function call
+functionName();
+
+function functionName(param1 , param2...){
+   // do sum work
+}
+
+function parameter like local variables they have block scope of function 
+
+return keyword is retrun a single value (ex. string, number, object, array)
+
+arrow function
+arrow function is compact way of writing a function 
+
+const functionName = (param1, param2) =>{
+   // do some work 
+}
+
+
+forEach Loop in Arrays
+arr.forEarch (callBackfunction)
+
+callBackfunction: Here , it is a function to execute for each element in the array
+
+** A callback is a function passed as an arrgument to another function
+
+what is higher order function
+
+forEach function is called higher order function. This function use parameter or return another function as a value
+
+
+Map Arrays Method
+Creates a new array with the results of some operation. The value its callback returns are used to form new array
+
+arr.map(callbackFnx(val,indx,arr));
+
+let newArr =   arr.map((val)=>{
+   return val*2;
+})
+ 
+filter method
+
+create a new array of elements that give true for a condition/filter ex. all even element
+
+let newArr = arr.filter((val)=>{
+   retrun val % 2 ===0 ;
+})
+
+reduce method
+performs some operations & reduces the array to a single value . It return that single value.
+
+
+
+window object
+
+The window object represents an open window in a browser. It is browser's object (not JavaScript's) & is automatically created  by browser 
+it is a global object with lots of peroperties & Methods
+
+
+What is DOM
+when a webpage is loaded, the browser created a document object model (DOM) of the page 
+
+DOM Manipulation
+
+Selecting with id
+
+document.getElementById("idName")
+
+
+Selecting with class
+
+document.getElementByClassName("class")
+
+Selecting with tags
+
+document.getElementByTagName("tagname")
+
+Query Selector
+
+document.querySelector("id/className/tags");
+return first element
+
+document.querySelectorAll("id/className/tags");
+
+return all element
+
+
+peroperties
+
+tagName: returns tag for element nodes
+innerText: returns the text content of the element and all its children 
+innerHTML: returns the plain text or HTML contents in the element
+textContent: returns textual content event for hidden elements 
+
+
+Attributes
+
+getAttribute(attrName)  to get the attribute value
+setAttribute(attr, value) to set the attribute value 
+
+
+style
+node.style
+
+
+Insert elements
+
+let el = document.createElement("div");
+
+node.append(el) adds at the end of node (inside)
+node.prepend(el) adds at the start of node (inside)
+node.before(el) adds before the node (outside)
+node.after(el) adds after the node (outside)
+
+Delete element
+
+node.remove()  remove the node 
+
+Event in  Js
+
+The change in the state of an object is known as an event
+
+Events are fired to notify code of "interesting changes" that may effect code execution.
+
+1. Mouse events (click, double click, etc.)
+2. keyword events (keypress, keyup, keydown)
+3. Form events (submit etc.)
+4. Print Events & many more
+
+Inline event headling
+when we handle our events in single HTML tag
+
+
+Event headling 
+
+node.event = ()=>{
+   // handle events
+}
+
+Event object
+
+It is a special object that has details about the event.
+All event handlers have access to the event object's peroperties and method
+
+node.event = (e)=>{
+   // handle here
+}
+
+e.target, e.type, e.clientX, e.clientY
+
+Event Listeners
+
+we can do multiple work for same event Listeners
+node.addEventListener(event, callback)
+node.removeEventListener(event, callback)
+
+Note: the callback reference should be same to remove
+
+
+mini project tic tac toe
+
+
+----------------------------------------------------------------
+
+Classes & objects
+
+
+Prototype
+A JavaScript object is an entity having state and behaviour (peroperties and method).
+JS objects have a special proprty called prototype.
+we can set prototype using __ proto __
+
+note:
+if object and prototype have same method, object's method will be used own
+
+Classes 
+
+class in program-code template for creating object.
+Those objects will have some state (variables) & some behaviour (function) inside it.
+
+class MyClass{
+   constructor (){
+      // do some work
+   }
+   myMethod(){
+      // do some work
+   }
+}
+
+let myObj = new MyClass();
+
+constructor
+constructor() method is:
+
+automatically invoked by new
+initializes object
+
+inheritance in Js
+
+inheritance is passing down peroperties & method from parent class to child class
+
+
+class Parent{
+
+}
+
+class Child extend Parent{
+
+}
+
+Note: if child & parent have some method, child's method will be used [method overriding]
+
+
+class Parent{
+   hello(){
+      console.log('hello');
+   }
+}
+
+class Child extend Parent{
+
+}
+
+let obj = new Child();
+
+
+Super Keyword
+The super keyword is used to call the constructor of its parent class to access the parent's properties and methods
+
+super(args)  
+// calls parent's constructor
+
+super.parentMethod(args)
+
+
+error handling
+
+try-catch
+
+try{
+   ... normal code
+}
+
+catch(err){
+   headling error
+}
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Sync in JS (Synchronous)
+
+Synchronous means the code runs in particular sequence of instructions given in the program. Each instruction waits for the previous instruction to complete its execution.
+
+
+Async (Asynchronous)
+Due to Synchronous programing, sometimes imp instructions get blocked due to some previous instruction, which causes a delay in the UI.
+Asynchronous code execution allows to execute next instructions immediatley and doesn't block the flow
+
+callbacks in JS
+A callback is a function passed as an arrgument to another function.
+
+
+Callback Hell
+Callback Hell: Nested callbacks stacked below one another forming a pyramid structure. 
+(pyramid of Doom)
+
+This style of programming becomes difficult to understand & manage
+
+promises
+
+promises is for  "eventual" completion of task. It is an object in JS.
+
+It is a solution to callback hell.
+
+let promises = new promise((resolve, reject)=>{
+   // do some code
+})
+
+A JavaScript promise object can be:
+
+1. Pending: the result is Undefined
+2. Resolved: the result is a value (Fulfilled)    resolve(result)
+3. Rejected: the result is an error object        reject (error)
+
+
+
+note: resolve and reject are callback provided by JS
+
+
+async - await
+asnyc function always returns a promise
+
+asnyc function myFucntion(){
+   // do somework
+}
+
+await pauses the execution of its surrounding async function until the promise is settled.
+
+
+IIFE: immediatley invoked Function expressions
+
+IIFE is a function that is called immediatley as soon as it is defined.
+
+(function(){
+   // do some works
+})();
+
+(()=>{
+   // do some works
+})();
+
+(asnyc()=>{
+   // do some works
+})();
+
+
+----------------------------------------------------------------------------------------------------------------
+
+fetch API
+
+The fetch API Provides an interface for fetching (sending/recieving) resources.
+
+It uses Request and respose objects.
+
+The fetch() method is used to fetch a resource (data)
+
+let Promise = fetch(url, [options])
+
+understanding Terms
+
+AJAX  is Asynchronous JS & XML
+
+JSON is JavaScript object Notation
+
+json() method: returns a second promise that resolves with the result of parsing the respose body text as JSON. (Input is JSON, output is JS object)
+
+video 23:52

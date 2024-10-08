@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .tabs {
+            display: flex;
+            gap: 10px;
+        }
+
+        .tab-button {
+            background-color: #f0f0f0;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .tab-button.active {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+
+        .tab-content {
+            padding: 20px;
+        }
+
+        .tab-pane {
+            display: none;
+        }
+
+        .tab-pane.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-3">
+                <div class="p-3 border rounded-5">
+                    <div
+                        style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; margin: 0 auto; background: #f3f3f3; border-radius: 50%; text-align: center;">
+                        <h4 class="icon mb-0"></h4>
+                    </div>
+                    <h4 class="mt-4 text-center text-primary name"></h4>
+                    <p class="username text-center mt-2"></p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5 mt-5">
+                <div style="background-color: #f3f3f3;" class="rounded p-4 text-center">
+                    <h1 class="text-success">0</h1>
+                    <div class="d-flex mt-4 align-items-center justify-content-between">
+                        <button class="btn btn-primary px-4" id="decrease">Decrease</button>
+                        <button class="btn btn-info text-white px-4" id="reset">Reset</button>
+                        <button class="btn btn-primary px-4" id="increase">Increase</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5" id="testimonial">
+
+        </div>
+        <!-- Tabs -->
+        <!-- <div class="tabs">
+            <button class="tab-button active" data-tab="tab1">Tab 1</button>
+            <button class="tab-button" data-tab="tab2">Tab 2</button>
+            <button class="tab-button" data-tab="tab3">Tab 3</button>
+        </div> -->
+
+        <!-- Tab Content -->
+        <!-- <div class="tab-content">
+            <div class="tab-pane active" id="tab1">Content for Tab 1</div>
+            <div class="tab-pane" id="tab2">Content for Tab 2</div>
+            <div class="tab-pane" id="tab3">Content for Tab 3</div>
+        </div> -->
+        <!-- <div class="date">
+            <h3 class="dateText"></h3>
+            <button class="dateBtn">Current Date</button>
+        </div> -->
+
+        <!-- <p>Today is : <span id="day"></span></p>
+        <p>Current is : <span id="time"></span></p> -->
+
+        <label>1st Number <input type="text" value="" id="num1" /></label>
+        <label>2nd Number <input type="text" value="" id="num2" /></label>
+        <button class="multiply">Mulptiply</button><button class="divide">Divide</button>
+
+        <br />
+        <br />
+        <p>Result: <span id="result"></span></p>
+    </div>
+    <script src="custom.js"></script>
+</body>
+
+</html>
