@@ -662,4 +662,19 @@ JSON is JavaScript object Notation
 
 json() method: returns a second promise that resolves with the result of parsing the respose body text as JSON. (Input is JSON, output is JS object)
 
-video 23:52
+Request and Response
+
+HTTP Verbs
+
+Response Status Code
+
+Informational Response (100 - 199)
+Successful Response (200 - 299)
+Redirection Message (300 - 399)
+Client Error Response (400 - 499)
+Server Error Response (500 - 599)
+
+Note: HTTP respose headers also contain details about the resposes, such as content type, HTTP status code etc.
+
+
+video 1:03:17
